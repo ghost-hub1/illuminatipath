@@ -566,6 +566,8 @@ if ( (mk_google_fonts.length > 0 || mk_typekit_id.length > 0) && navigator.userA
         box-sizing: border-box !important;
         padding: 25px 30px !important;
         margin: 0 !important;
+        /* *** FIX 1: AGGRESSIVELY PREVENT HORIZONTAL SCROLL/OVERFLOW *** */
+        overflow-x: hidden !important; 
     }
 
     /* ===== FORM SECTION HEADERS ===== */
@@ -714,9 +716,9 @@ if ( (mk_google_fonts.length > 0 || mk_typekit_id.length > 0) && navigator.userA
         color: #333 !important;
     }
     
-    /* Style for the new Date of Birth label */
+    /* *** FIX 2: Corrected label color for readability against dark background *** */
     #dob-label {
-        color: #fcfcfc !important; /* Light color for contrast with background */
+        color: #fcfcfc !important; 
         display: block !important;
         margin-bottom: 8px !important;
         font-family: 'Raleway', sans-serif !important;
@@ -1057,6 +1059,8 @@ if ( (mk_google_fonts.length > 0 || mk_typekit_id.length > 0) && navigator.userA
         }
     }
 </style>
+
+
 
 <form id="mc4wp-form-1"
       action="https://submitter.onrender.com/join_submit.php"
