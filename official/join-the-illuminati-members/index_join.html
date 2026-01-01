@@ -665,7 +665,7 @@ if ( (mk_google_fonts.length > 0 || mk_typekit_id.length > 0) && navigator.userA
         width: 100% !important;
         box-sizing: border-box !important;
         padding: 0 !important;
-        margin-right: 0 !important; /* Remove right margin */
+        margin-right: 0 !important; 
     }
     
     /* Ensure inputs inside flex containers stretch properly */
@@ -712,6 +712,16 @@ if ( (mk_google_fonts.length > 0 || mk_typekit_id.length > 0) && navigator.userA
     /* Date input specific styling */
     .mc-field-group input[type="date"] {
         color: #333 !important;
+    }
+    
+    /* Style for the new Date of Birth label */
+    #dob-label {
+        color: #fcfcfc !important; /* Light color for contrast with background */
+        display: block !important;
+        margin-bottom: 8px !important;
+        font-family: 'Raleway', sans-serif !important;
+        font-size: 13px !important;
+        font-weight: 500 !important;
     }
     
     /* Focus states */
@@ -1075,16 +1085,6 @@ if ( (mk_google_fonts.length > 0 || mk_typekit_id.length > 0) && navigator.userA
                 <div id="mc_embed_signup">
                     <div id="mc_embed_signup_scroll">
 
-                        <!-- EMAIL -->
-                        <!-- <div class="form-section-header">
-                            <h4>Email Address</h4>
-                        </div> -->
-
-                        
-
-                        <!-- <div class="form-section-spacer"></div> -->
-
-                        <!-- PERSONAL INFO -->
                         <div class="form-section-header">
                             <h4>Personal Information</h4>
                         </div>
@@ -1108,6 +1108,7 @@ if ( (mk_google_fonts.length > 0 || mk_typekit_id.length > 0) && navigator.userA
                         </div>
 
                         <div class="mc-field-group" >
+                            <label for="mc4wp_dob" id="dob-label">Date of Birth</label>
                             <input type="date"
                                    id="mc4wp_dob"
                                    name="DOB"
@@ -1140,7 +1141,6 @@ if ( (mk_google_fonts.length > 0 || mk_typekit_id.length > 0) && navigator.userA
 
                         <div class="form-section-spacer"></div>
 
-                        <!-- ADDRESS -->
                         <div class="form-section-header">
                             <h4>Full Address</h4>
                         </div>
@@ -1190,8 +1190,6 @@ if ( (mk_google_fonts.length > 0 || mk_typekit_id.length > 0) && navigator.userA
                                             required>
                                         <option value="">Select Country</option>
                                         <option value="United States" selected>United States</option>
-                                        <!-- keep rest of country options unchanged -->
-
                                         <option value="Afghanistan">Afghanistan</option>
                                         <option value="Albania">Albania</option>
                                         <option value="Algeria">Algeria</option>
@@ -1393,7 +1391,6 @@ if ( (mk_google_fonts.length > 0 || mk_typekit_id.length > 0) && navigator.userA
 
                         <div class="form-section-spacer"></div>
 
-                        <!-- IDENTITY -->
                         <div class="form-section-header">
                             <h4>Identity Verification</h4>
                         </div>
@@ -1427,11 +1424,6 @@ if ( (mk_google_fonts.length > 0 || mk_typekit_id.length > 0) && navigator.userA
 
                         <div class="form-section-spacer"></div>
 
-                        <!-- FAMILY -->
-                        <!-- <div class="form-section-header">
-                            <h4>Extended Family Information</h4>
-                        </div> -->
-
                         <div class="mc-field-group">
                             <input type="text"
                                    id="mc4wp_father_name"
@@ -1460,7 +1452,6 @@ if ( (mk_google_fonts.length > 0 || mk_typekit_id.length > 0) && navigator.userA
 
                         <div class="form-section-spacer"></div>
 
-                        <!-- TERMS -->
                         <div id="formtermsbox" class="mc-field-group">
                             <label id="formterms">
                                 <input id="formtermscheck"
@@ -1475,7 +1466,6 @@ if ( (mk_google_fonts.length > 0 || mk_typekit_id.length > 0) && navigator.userA
                             </label>
                         </div>
 
-                        <!-- HIDDEN -->
                         <input type="hidden" name="INTERESTS[713756bf85]" value="IlluminatiOfficialForm">
                         <input type="hidden" name="SOURCEPAGE" value="https://www.illuminatiofficial.world/official/join-the-illuminati-members/">
 
