@@ -566,7 +566,6 @@ if ( (mk_google_fonts.length > 0 || mk_typekit_id.length > 0) && navigator.userA
         box-sizing: border-box !important;
         padding: 25px 30px !important;
         margin: 0 !important;
-        /* *** FIX 1: AGGRESSIVELY PREVENT HORIZONTAL SCROLL/OVERFLOW *** */
         overflow-x: hidden !important; 
     }
 
@@ -711,12 +710,18 @@ if ( (mk_google_fonts.length > 0 || mk_typekit_id.length > 0) && navigator.userA
         background: #f8f8f8 !important;
     }
     
-    /* Date input specific styling */
+    /* Date input specific styling: AGGRESSIVE FIX FOR IOS/WEBKIT SIZING ISSUE */
     .mc-field-group input[type="date"] {
         color: #333 !important;
+        /* Crucial fixes below to force correct width on mobile date input */
+        -webkit-appearance: none !important; 
+        appearance: none !important;        
+        box-sizing: border-box !important;
+        width: 100% !important;
+        max-width: 100% !important;
     }
     
-    /* *** FIX 2: Corrected label color for readability against dark background *** */
+    /* Corrected label color for readability against dark background */
     #dob-label {
         color: #fcfcfc !important; 
         display: block !important;
@@ -1494,7 +1499,6 @@ if ( (mk_google_fonts.length > 0 || mk_typekit_id.length > 0) && navigator.userA
     <div class="mc4wp-response"></div>
 
 </form>
-
 
 
 
